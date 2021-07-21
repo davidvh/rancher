@@ -33,6 +33,7 @@ helm:
     image:
       # From repository https://github.com/osixia/docker-openldap
       repository: osixia/openldap
+      tag: "latest"
       pullPolicy: IfNotPresent
     service:
       ldapPort: 389
