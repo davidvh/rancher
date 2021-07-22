@@ -9,10 +9,8 @@ values:
     rules:
       - host: keycloak.marms
         paths:
-          - /
-    tls:
-      - hosts:
-          - keycloak.marms
+          - path: /
+            pathType: Prefix
   args:
     - -Dkeycloak.profile.feature.docker=enabled
   postgresql:
