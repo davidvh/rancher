@@ -11,7 +11,15 @@ values:
   extraEnv: |
     - name: KEYCLOAK_LOGLEVEL
       value: DEBUG
-    - name: KEYCLOAK_USER
-      value: admin
+      - name: KEYCLOAK_USER
+        valueFrom:
+          secretKeyRef:
+            name: keycloak-admin
+            key: user
+      - name: KEYCLOAK_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: keycloak-admin
+            key: password
     - name: PROXY_ADDRESS_FORWARDING
       value: "true"
