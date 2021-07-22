@@ -1,7 +1,7 @@
 defaultNamespace: keycloak-system
 helm:
   releaseName: keycloak
-  chart: codecentric
+  chart: keycloak
   repo: https://codecentric.github.io/helm-charts
 values:
   ingress:
