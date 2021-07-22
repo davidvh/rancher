@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keycloak-ingress
+  namespace: keycloak-system
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                port:
+                  number: 80
+                name: keycloak-http
+            path: /
+            pathType: Prefix
+      host: keycloak.marms
