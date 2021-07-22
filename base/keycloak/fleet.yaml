@@ -8,18 +8,24 @@ values:
     - -Dkeycloak.profile.feature.docker=enabled
   postgresql:
     enabled: true
+    postgresqlPassword: 
   extraEnv: |
     - name: KEYCLOAK_LOGLEVEL
       value: DEBUG
       - name: KEYCLOAK_USER
         valueFrom:
           secretKeyRef:
-            name: keycloak-admin
+            name: keycloak-setup
             key: user
       - name: KEYCLOAK_PASSWORD
         valueFrom:
           secretKeyRef:
-            name: keycloak-admin
+            name: keycloak-setup
             key: password
+      - name: POSTGRESQL_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: keycloak-setup
+            key: postgresql_passwd
     - name: PROXY_ADDRESS_FORWARDING
       value: "true"
