@@ -6,11 +6,19 @@ helm:
 values:
   ingress:
     enabled: true
+    servicePort: http
     rules:
-      - host: keycloak.marms
+      - host: 'keycloak.marms'
         paths:
           - path: /
             pathType: Prefix
+    console:
+      enabled: true
+      rules:
+        - host: 'keycloak.marms'
+          paths:
+            - path: /auth/admin/
+              pathType: Prefix
   args:
     - -Dkeycloak.profile.feature.docker=enabled
   postgresql:
