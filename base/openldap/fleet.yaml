@@ -44,7 +44,7 @@ helm:
     env:
       LDAP_ORGANISATION: "Marms Home"
       LDAP_DOMAIN: "marms.duckdns.org"
-      LDAP_BACKEND: "hdb"
+      LDAP_BACKEND: "mdb"
       LDAP_TLS: "true"
       LDAP_TLS_ENFORCE: "false"
       LDAP_REMOVE_CONFIG_AFTER_SETUP: "true"
