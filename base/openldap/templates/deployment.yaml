@@ -34,6 +34,7 @@ spec:
         app: {{ template "openldap.name" . }}
         release: {{ .Release.Name }}
     spec:
+      hostname: {{ .Values.hostname }}
       {{- if or .Values.customLdifFiles .Values.tls.enabled }}
       initContainers:
       {{- end }}
