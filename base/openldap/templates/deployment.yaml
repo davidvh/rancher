@@ -88,10 +88,8 @@ spec:
           ports:
             - name: ldap-port
               containerPort: 389
-              hostPort: 389
             - name: ssl-ldap-port
               containerPort: 636
-              hostPort: 636
           envFrom:
             - configMapRef:
                 name: {{ template "openldap.fullname" . }}-env
