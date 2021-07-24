@@ -50,3 +50,12 @@ helm:
       accessMode: ReadWriteOnce
       size: 8Gi
     logLevel: info
+    customLdifFiles:
+      initial-ous.ldif: |-
+        dn: ou=People,dc=keycloak,dc=live,dc=marms,dc=co,dc=snoho
+        objectClass: organizationalUnit
+        ou: People
+
+        dn: ou=Group,dc=keycloak,dc=live,dc=marms,dc=co,dc=snoho
+        objectClass: organizationalUnit
+        ou: Group
