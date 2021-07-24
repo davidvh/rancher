@@ -29,7 +29,7 @@ helm:
 
   # Custom values that will be passed as values.yaml to the installation
   values:
-    hostname: ldap.kube
+    hostname: ldap
     replicaCount: 1
     image:
       # From repository https://github.com/osixia/docker-openldap
