@@ -29,8 +29,10 @@ helm:
 
   # Custom values that will be passed as values.yaml to the installation
   values:
-    hostname: ldap
     replicaCount: 1
+    strategy:
+      type: Recreate
+      rollingUpdate: null
     image:
       # From repository https://github.com/osixia/docker-openldap
       repository: osixia/openldap
