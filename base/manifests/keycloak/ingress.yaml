@@ -13,4 +13,4 @@ spec:
                 name: keycloak-http
             path: /
             pathType: Prefix
-      host: keycloak.marms
+      host: keycloak.service.marms
