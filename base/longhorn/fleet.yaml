@@ -1,5 +1,0 @@
-defaultNamespace: longhorn-system
-helm:
-  releaseName: longhorn
-  chart: longhorn
-  repo: https://charts.rancher.io
