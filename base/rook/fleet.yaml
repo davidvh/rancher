@@ -1,0 +1,5 @@
+defaultNamespace: rook-ceph
+helm:
+  releaseName: rook-ceph
+  chart: rook-ceph
+  repo: https://charts.rook.io/release
