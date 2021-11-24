@@ -10,7 +10,7 @@ spec:
     allowUnsupported: true
   mon:
     # TODO: 3 instances on separate nodes
-    count: 1
+    count: 3
     allowMultiplePerNode: true
   mgr:
     # TODO: 3 instances on separate nodes
