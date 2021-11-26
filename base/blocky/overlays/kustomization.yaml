@@ -1,2 +1,2 @@
-patches:
+resources:
 - loadbalancer.yaml
