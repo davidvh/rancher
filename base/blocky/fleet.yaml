@@ -179,3 +179,5 @@ helm:
         ports:
           http:
             port: 4000
+kustomize:
+  dir: overlays
